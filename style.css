@@ -36,7 +36,12 @@ a{text-decoration:none;color:inherit}
 .button-outline{border:1px solid #aeb6c2;color:var(--navy)}
 .trust{margin-top:52px;color:#737b86;font-size:12px;display:flex;align-items:center;gap:13px}
 .trust span{width:34px;height:1px;background:#6f91c5}
-.hero-art{position:relative;min-height:615px}
+.hero-art{position:relative;min-height:615px;display:flex;align-items:center;justify-content:center;padding:60px 6% 60px 4%}
+.hero-photo{position:relative;z-index:2;display:block;width:100%;max-width:520px;height:auto;border-radius:17px;box-shadow:0 16px 38px rgba(0,0,0,.18)}
+@media(min-width:901px){
+  .hero-art{padding:0 6% 0 4%}
+  .hero-photo{position:absolute;top:50%;right:6%;transform:translateY(-50%);width:min(922px,46vw);max-width:none;height:auto}
+}
 .wave{position:absolute;width:640px;height:640px;border:1px solid #b9c9df;border-left-color:transparent;border-bottom-color:transparent;border-radius:50%;transform:rotate(37deg)}
 .wave-a{top:45px;left:0}
 .wave-b{top:145px;left:190px;transform:rotate(37deg) scale(.68)}
@@ -108,7 +113,7 @@ a{text-decoration:none;color:inherit}
 .benefit-grid h3,.process h3{font-family:var(--serif);font-size:31px;line-height:1.05;margin:18px 0 24px}
 ul{padding-left:19px;margin:0;color:var(--text)}
 li{margin:11px 0}
-.process{background:#fff}
+.process{background:#fefefe}
 .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
 .process-grid article{padding:42px 45px 30px 0;border-right:1px solid var(--line)}
 .process-grid article+article{padding-left:45px}
@@ -202,6 +207,24 @@ footer .footer-top a{display:block;color:#dbe0e8;font-size:12px;margin:10px 0}
   font-size:18px;
   line-height:1.8;
   margin:-25px 0 65px;
+}
+.approach-row{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:60px;
+  margin-bottom:65px;
+}
+.approach-row .section-intro{margin-bottom:0}
+.approach-row .about-lead{margin:30px 0 0}
+.approach-photo{
+  display:block;
+  width:min(922px,46vw);
+  height:auto;
+}
+@media(max-width:900px){
+  .approach-row{grid-template-columns:1fr;gap:40px}
+  .approach-photo{width:100%}
 }
 .about-closing{
   margin-top:60px;
