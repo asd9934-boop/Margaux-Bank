@@ -213,3 +213,164 @@ footer .footer-top a{display:block;color:#dbe0e8;font-size:12px;margin:10px 0}
 .about-closing{margin-top:60px;font-family:var(--serif);font-size:38px;line-height:1.1;color:var(--ink);font-weight:500}
 @media(max-width:1100px){.pearl-card-image-wrap{width:100%;max-width:700px;margin:0 auto}}
 @media(max-width:600px){.pearl-card-image-wrap{width:100%}.about-lead{font-size:16px;margin:-20px 0 45px}.about-closing{font-size:32px;margin-top:45px}}
+
+/* Final card sizing fix: prevent the supplied image from expanding the grid track. */
+.pearl-card-image-wrap{
+  width:430px;
+  min-width:0;
+  max-width:430px;
+}
+.pearl-card-image{
+  width:430px;
+  max-width:100%;
+  min-width:0;
+  height:auto;
+}
+@media(max-width:1100px){
+  .pearl-card-image-wrap{
+    width:100%;
+    max-width:430px;
+    min-width:0;
+    margin:0 auto;
+  }
+  .pearl-card-image{
+    width:430px;
+    max-width:100%;
+  }
+}
+@media(max-width:600px){
+  .pearl-card-image-wrap,
+  .pearl-card-image{
+    width:100%;
+    max-width:100%;
+  }
+}
+
+/* Standalone About Margaux page — same design language as the homepage. */
+.about-hero{
+  min-height:520px;
+  background:var(--paper);
+  display:flex;
+  align-items:center;
+  padding:100px 10%;
+}
+.about-hero-copy{
+  max-width:850px;
+}
+.about-hero h1{
+  font-family:var(--serif);
+  font-weight:600;
+  line-height:.92;
+  letter-spacing:-.025em;
+  margin:0;
+  color:var(--ink);
+  font-size:78px;
+}
+.about-hero-copy > p:last-child{
+  max-width:650px;
+  color:var(--text);
+  font-size:18px;
+  line-height:1.8;
+  margin:35px 0 0;
+}
+.about-main{
+  background:#fff;
+}
+.about-values{
+  background:var(--navy);
+  color:#fff;
+  padding:115px 10%;
+  text-align:center;
+}
+.about-values-inner{
+  max-width:850px;
+  margin:0 auto;
+}
+.about-values .eyebrow{
+  color:var(--gold);
+}
+.about-values h2{
+  font-family:var(--serif);
+  font-weight:500;
+  font-size:67px;
+  line-height:.95;
+  letter-spacing:-.02em;
+  margin:0 0 30px;
+  color:#fff;
+}
+.about-values p:not(.eyebrow){
+  max-width:650px;
+  margin:0 auto 35px;
+  color:#dce2ec;
+  font-size:17px;
+  line-height:1.8;
+}
+.about-values .button-primary{
+  display:inline-block;
+}
+@media(max-width:600px){
+  .about-hero{
+    min-height:430px;
+    padding:80px 8%;
+  }
+  .about-hero h1{
+    font-size:55px;
+  }
+  .about-hero-copy > p:last-child{
+    font-size:15px;
+  }
+  .about-values{
+    padding:85px 8%;
+  }
+  .about-values h2{
+    font-size:48px;
+  }
+}
+
+/* Pearl card: transparent isolated artwork, matching the original card footprint. */
+.pearl-card-image-wrap{
+  width:430px;
+  height:270px;
+  min-width:430px;
+  max-width:430px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.pearl-card-image{
+  display:block;
+  width:430px;
+  height:270px;
+  max-width:430px;
+  max-height:270px;
+  object-fit:contain;
+  border-radius:17px;
+  box-shadow:0 16px 38px rgba(0,0,0,.18);
+}
+@media(max-width:1100px){
+  .pearl-card-image-wrap{
+    width:430px;
+    height:270px;
+    min-width:0;
+    max-width:100%;
+    margin:0 auto;
+  }
+  .pearl-card-image{
+    width:430px;
+    height:270px;
+    max-width:100%;
+  }
+}
+@media(max-width:600px){
+  .pearl-card-image-wrap{
+    width:100%;
+    height:auto;
+    min-width:0;
+    max-width:100%;
+  }
+  .pearl-card-image{
+    width:100%;
+    height:auto;
+    max-width:100%;
+  }
+}
