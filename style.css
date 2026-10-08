@@ -204,3 +204,12 @@ footer .footer-top a{display:block;color:#dbe0e8;font-size:12px;margin:10px 0}
   .spec-column{display:flex;gap:30px}
   .spec-item strong{font-size:18px}
 }
+
+/* Pearl card image — uses the supplied campaign card artwork. */
+.pearl-card-image-wrap{width:430px;display:flex;align-items:center;justify-content:center}
+.pearl-card-image{display:block;width:100%;height:auto;border-radius:17px;box-shadow:0 16px 38px rgba(0,0,0,.28);object-fit:cover}
+/* About Margaux */
+.about-lead{max-width:900px;color:var(--text);font-size:18px;line-height:1.8;margin:-25px 0 65px}
+.about-closing{margin-top:60px;font-family:var(--serif);font-size:38px;line-height:1.1;color:var(--ink);font-weight:500}
+@media(max-width:1100px){.pearl-card-image-wrap{width:100%;max-width:700px;margin:0 auto}}
+@media(max-width:600px){.pearl-card-image-wrap{width:100%}.about-lead{font-size:16px;margin:-20px 0 45px}.about-closing{font-size:32px;margin-top:45px}}
